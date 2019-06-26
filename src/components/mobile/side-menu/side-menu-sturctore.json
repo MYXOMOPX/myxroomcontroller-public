@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Главная",
+    "type": "link",
+    "link": "/"
+  }
+
+  ,{
+    "type": "divider"
+  }
+
+  ,{
+    "name": "MYX-ROOM",
+    "type": "category"
+  }
+
+  ,{
+    "name": "Основной свет",
+    "type": "container",
+    "path": "/myx/main",
+    "childs": [
+      {
+        "name": "Общее",
+        "type": "link",
+        "icon": "info",
+        "link": "myx/main/common"
+      }
+
+      ,{
+        "name": "RGB лента",
+        "type": "container",
+        "icon": "blurOn",
+        "path": "/myx/main/rgb",
+        "childs": [
+          {
+            "name": "Стандартный",
+            "type": "link",
+            "link": "/myx/main/rgb/default"
+          },
+          {
+            "name": "Радуга",
+            "type": "link",
+            "link": "/myx/main/rgb/rainbow"
+          }
+        ]
+      }
+
+      ,{
+        "name": "Белая лента",
+        "type": "container",
+        "icon": "sun",
+        "path": "/myx/main/mono",
+        "childs": [
+          {
+            "name": "Стандартный",
+            "type": "link",
+            "link": "/myx/main/mono/default"
+          }
+        ]
+      }
+
+      ,{
+        "name": "Режимы",
+        "type": "container",
+        "icon": "assessment",
+        "path": "/myx/main/modifiers",
+        "childs": [
+          {
+            "name": "BPM",
+            "type": "link",
+            "link": "/myx/main/modifier/bpm"
+          }
+        ]
+      }
+    ]
+  }
+
+  ,{
+    "name": "WS2812",
+    "type": "container",
+    "path": "/myx/ws2812",
+    "childs": []
+  }
+
+  ,{
+    "type": "divider"
+  }
+
+  ,{
+    "name": "DPOH-VAR",
+    "type": "category"
+  }
+
+]

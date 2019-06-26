@@ -1,0 +1,116 @@
+$circle-size_mobile: 170px;
+
+.color-picker__circle {
+  height: $circle-size_mobile;
+  width: $circle-size_mobile;
+  color: inherit;
+  background-color: inherit;
+  border-radius: 100%;
+  border: 3px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__text {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.color-picker__dialog {
+
+    &__body {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      &__button {
+          width: 100%;
+      }
+    }
+}
+
+$mic-circle-size: 200px;
+$mic-circle-sub-size: $mic-circle-size;
+$mic-circle-zindex-sub: 15;
+$mic-circle-zindex-text: 20;
+.bpm-mic-circle {
+    height: $mic-circle-size;
+    width: $mic-circle-size;
+    margin: 20px;
+    background-color: rgb(210,210,210);
+    border-radius: 100%;
+    position: relative;
+    border: 1px solid #BBB;
+    cursor: pointer;
+
+    &__sub {
+      height: $mic-circle-sub-size;
+      width: $mic-circle-sub-size;
+      position: absolute;
+      left: ($mic-circle-size - $mic-circle-sub-size)/2;
+      top: ($mic-circle-size - $mic-circle-sub-size)/2;
+      transform-origin: 50% 50%;
+      transition: transform 0.2s ease-in-out;
+      //transform: scale(0);
+      z-index: $mic-circle-zindex-sub;
+      border-radius: 100%;
+      background-color: rgba(0,0,0,0.1);
+      &.record{
+        animation: ease-in-out sub-scaling 3s infinite;
+      }
+    }
+
+    &__bpm-text {
+      $width: 44px;
+      $fontSize: 26px;
+      font-size: $fontSize;
+      color: white;
+      position: absolute;
+      z-index: $mic-circle-zindex-text;
+      line-height: $fontSize;
+      width: $width;
+      text-align: center;
+      left: ($mic-circle-size - $width)*0.49;
+      top: ($mic-circle-size - $fontSize)*0.7;
+    }
+
+    &__icon-container {
+      $size: 60px;
+      position: absolute;
+      color: white;
+      z-index: $mic-circle-zindex-text;
+      width: $size;
+      height: $size;
+      text-align: center;
+      left: ($mic-circle-size - $size)*0.5;
+      top: ($mic-circle-size - $size)*0.4;
+      &__icon {
+        font-size: $size !important;
+      }
+      &.record{
+        animation: ease-in-out mic-record 3s infinite;
+      }
+    }
+
+    @-webkit-keyframes sub-scaling {
+        0% {transform: scale(0); ; opacity: (1)}
+        70% {transform: scale(1); opacity: (0.3)}
+        100% {opacity: (0)}
+    }
+
+    @-webkit-keyframes mic-record {
+      0% {
+        color: rgb(255,0,0);
+        transform: scale(1);
+      }
+      30% {
+        color: rgb(170,0,0);
+        transform: scale(0.9);
+      }
+      100% {
+        color: rgb(255,0,0);
+        transform: scale(1);
+      }
+    }
+}

@@ -1,0 +1,140 @@
+$circle-size_mobile: 170px;
+
+.mode-rgb-default {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.mode-rgb-default__input {
+    margin-top: 20px;
+    width: 218px;
+}
+
+button.mode-rgb-default__button {
+    margin-top: 20px;
+    width: 218px;
+}
+
+
+.mode-mono-default {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &__input {
+        margin-top: 20px;
+        width: 218px;
+    }
+
+    &__slider-ctr {
+        width: 218px;
+        &__slider {
+            padding-left: 0px !important;
+        }
+    }
+
+    &__button{
+        width: 218px;
+    }
+}
+button.mode-mono-default__button{
+    margin-top: 20px;
+}
+
+
+
+.mode-rgb-rainbow {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &__input {
+        margin-top: 20px;
+        width: 218px;
+    }
+
+    &__slider-ctr {
+        margin-top: 20px;
+        width: 218px;
+        &__slider {
+            padding-left: 0px !important;
+        }
+    }
+
+    &__button{
+        width: 218px;
+    }
+}
+button.mode-rgb-rainbow__button{
+    margin-top: 20px;
+}
+
+
+.page-common {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    $strip-color-filled: rgba(0,0,0,0.4);
+    $strip-color-empty: transparent;
+    $strip-color-border: #bababa;
+    $strip-cell-size: 15px;
+    &__strip {
+        cursor: pointer;
+        transition: background-color linear 0.15s;
+        outline: $strip-color-border 2px solid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: $strip-cell-size;
+        background: repeating-linear-gradient( 90deg,
+                    $strip-color-empty 0px,
+                    $strip-color-empty 20px,
+                    $strip-color-filled 20px,
+                    $strip-color-filled 40px
+        );
+
+        &_mono {
+            width: $strip-cell-size*21;
+        }
+        &_rgb {
+            width: $strip-cell-size*17;
+        }
+    }
+
+    &__button {
+        margin-top: 15px !important;
+    }
+}
+
+
+
+.modifier-bpm {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &__input {
+        margin-top: 20px;
+        width: 218px;
+    }
+
+    &__slider-ctr {
+        margin-top: 20px;
+        width: 218px;
+        &__slider {
+            padding-left: 0px !important;
+        }
+    }
+
+    &__button{
+        width: 218px;
+    }
+}
+button.modifier-bpm__button{
+    margin-top: 20px;
+}
